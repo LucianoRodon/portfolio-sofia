@@ -324,17 +324,25 @@ h3 {
   height: 20px;
 }
 
+/* ⬇⬇⬇ BLOQUE MOBILE ACTUALIZADO */
 @media(max-width:780px) {
   .menuBtn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    /* nuevo: que no quede pegado al borde derecho */
+    margin-right: 8px;
   }
 
   .navlinks {
     position: absolute;
-    top: 56px;
-    right: 0;
+
+    /* antes: top:56px; right:0; ahora le damos aire */
+    top: 60px;
+    right: 16px;
+    left: auto;
+
     flex-direction: column;
     align-items: stretch;
     background: var(--surface);
@@ -346,6 +354,7 @@ h3 {
     opacity: 0;
     transform: translateY(-10px) scale(.96);
     pointer-events: none;
+    z-index: 999;
   }
 
   .navlinks.show {
@@ -360,6 +369,7 @@ h3 {
     justify-content: flex-start;
   }
 }
+/* ⬆⬆⬆ FIN BLOQUE MOBILE ACTUALIZADO */
 
 /* ================== HERO ================== */
 .hero-wrap {
